@@ -4,7 +4,7 @@ namespace PHPValueObjects\Money;
 
 use Exception;
 
-class Money
+final class Money
 {
     /**
      * Money constructor.
