@@ -14,7 +14,7 @@ final class Currency
     private function __construct($code)
     {
         if (!is_string($code)) {
-            throw new \Exception('Code must be string');
+            throw new \Exception('Currecny code must be string');
         }
         $this->code = $code;
     }
@@ -42,6 +42,16 @@ final class Currency
     }
 
     /**
+     * Return currency represented as string
+     *
+     * @return string
+     */
+    public function toString(): String
+    {
+        return $this;
+    }
+
+    /**
      * Get currency
      *
      * @return mixed
@@ -49,5 +59,17 @@ final class Currency
     private function getCode()
     {
         return $this->code;
+    }
+
+    /** 
+     * More user friendly interface for creating currency
+     *
+     * @param $method
+     * @param $args
+     * @return Currency
+     */
+    public static function __callStatic($method,$args = null): Currency
+    {
+        return Currency::fromString($method,$args);
     }
 }

@@ -1,10 +1,11 @@
 <?php
 
 namespace PHPValueObjects\Money;
+use PHPValueObjects\ValueObject;
 
 use Exception;
 
-final class Money
+final class Money implements ValueObject
 {
     /**
      * Money constructor.
@@ -38,6 +39,17 @@ final class Money
     {
         return $this->amount . "" . $this->currency;
     }
+
+    /**
+     * Return money represented as string
+     *
+     * @return string
+     */
+    public function toString()
+    {
+        return $this;
+    }
+        
 
     /**
      * Get only amount
@@ -80,7 +92,7 @@ final class Money
      * @param Money $money
      * @return bool
      */
-    public function equals(Money $money): bool
+    public function equals(ValueObject $money): bool
     {
         return $this->getCurrency() . "" . $this->getAmount() == $money->getCurrency() . "" . $money->getAmount();
     }
