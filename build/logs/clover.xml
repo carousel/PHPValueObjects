@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1527786236">
-  <project timestamp="1527786236">
+<coverage generated="1527786325">
+  <project timestamp="1527786325">
     <package name="PHPValueObjects\Money">
       <file name="/var/www/packages/PHPValueObjects/src/Money/Money.php">
         <class name="PHPValueObjects\Money\Money" namespace="PHPValueObjects\Money">
