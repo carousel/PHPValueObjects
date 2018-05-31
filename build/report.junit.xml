@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name=":vendor Test Suite" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="0.008966">
-    <testsuite name="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="0.008966">
-      <testcase name="testMoneyCanBeCreatedFromString" class="MoneyTest" classname="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" line="13" assertions="1" time="0.004800"/>
-      <testcase name="testMoneyAmountIsEqual" class="MoneyTest" classname="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" line="28" assertions="1" time="0.001381"/>
-      <testcase name="testMoneyCanBeSubtracted" class="MoneyTest" classname="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" line="41" assertions="1" time="0.001258"/>
-      <testcase name="testMoneyAndCurrencyCanBeCreatedStatically" class="MoneyTest" classname="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" line="60" assertions="1" time="0.001527"/>
+  <testsuite name=":vendor Test Suite" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="0.009329">
+    <testsuite name="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" tests="4" assertions="4" errors="0" failures="0" skipped="0" time="0.009329">
+      <testcase name="testMoneyCanBeCreatedFromString" class="MoneyTest" classname="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" line="13" assertions="1" time="0.004857"/>
+      <testcase name="testMoneyAmountIsEqual" class="MoneyTest" classname="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" line="28" assertions="1" time="0.001469"/>
+      <testcase name="testMoneyCanBeSubtracted" class="MoneyTest" classname="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" line="41" assertions="1" time="0.001694"/>
+      <testcase name="testMoneyAndCurrencyCanBeCreatedStatically" class="MoneyTest" classname="MoneyTest" file="/var/www/packages/PHPValueObjects/src/Money/test/MoneyTest.php" line="60" assertions="1" time="0.001309"/>
     </testsuite>
   </testsuite>
 </testsuites>
