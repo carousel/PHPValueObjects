@@ -11,7 +11,7 @@ final class Money
      * @param $currency
      * @param $amount
      */
-    private function __construct($currency, $amount)
+    private function __construct(Currency $currency, $amount)
     {
         $this->currency = $currency;
         $this->amount = $amount;
@@ -24,7 +24,7 @@ final class Money
      * @param $amount
      * @return Money
      */
-    public static function fromString($currency, $amount): Money
+    public static function fromString(Currency $currency, $amount): Money
     {
         return new Money($currency, $amount);
     }
@@ -94,6 +94,6 @@ final class Money
      */
     public static function __callStatic($method, $args): Money
     {
-        return Money::fromString($method, $args[0]);
+        return Money::fromString(Currency::fromString($method), $args[0]);
     }
 }

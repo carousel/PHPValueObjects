@@ -1,6 +1,7 @@
 <?php
 
 use PHPValueObjects\Money\Money;
+use PHPValueObjects\Money\Currency;
 use PHPUnit\Framework\TestCase;
 
 class MoneyTest extends TestCase
@@ -12,7 +13,7 @@ class MoneyTest extends TestCase
      */
     public function testMoneyCanBeCreatedFromString()
     {
-        $money = Money::fromString('EUR', 200);
+        $money = Money::fromString(Currency::fromString('EUR'), 200);
 
         $reflector = new ReflectionClass($money);
         $method = $reflector->getMethod('getAmount');
@@ -27,8 +28,8 @@ class MoneyTest extends TestCase
      */
     public function testMoneyAmountIsEqual()
     {
-        $money = Money::fromString('EUR', 300);
-        $money1 = Money::fromString('EUR', 300);
+        $money = Money::fromString(Currency::fromString('EUR'), 300);
+        $money1 = Money::fromString(Currency::fromString('EUR'), 300);
 
         $this->assertTrue($money->equals($money1));
     }
@@ -40,8 +41,8 @@ class MoneyTest extends TestCase
      */
     public function testMoneyCanBeSubtracted()
     {
-        $money = Money::fromString('EUR', 200);
-        $money1 = Money::fromString('EUR', 882);
+        $money = Money::fromString(Currency::fromString('EUR'), 200);
+        $money1 = Money::fromString(Currency::fromString('EUR'), 882);
         $newAmount = $money->add($money1);
 
         $reflector = new ReflectionClass($newAmount);
@@ -59,7 +60,7 @@ class MoneyTest extends TestCase
      */
     public function testMoneyAndCurrencyCanBeCreatedStatically()
     {
-        $money = Money::fromString('EUR', 200);
+        $money = Money::fromString(Currency::fromString('EUR'), 200);
         $newAmount = Money::EUR(150)->add($money);
 
         $reflector = new ReflectionClass($newAmount);
