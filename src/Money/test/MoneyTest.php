@@ -13,7 +13,7 @@ class MoneyTest extends TestCase
      */
     public function testMoneyCanBeCreatedFromString()
     {
-        $money = Money::fromString(Currency::fromString('EUR'), 200);
+        $money = Money::fromString(Currency::fromString('eur'), 200);
 
         $reflector = new ReflectionClass($money);
         $method = $reflector->getMethod('getAmount');

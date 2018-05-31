@@ -1,6 +1,7 @@
 <?php
 
 namespace PHPValueObjects\Money;
+
 use PHPValueObjects\ValueObject;
 
 use Exception;
@@ -37,7 +38,7 @@ final class Money implements ValueObject
      */
     public function __toString(): String
     {
-        return $this->amount . "" . $this->currency;
+        return $this->toString();
     }
 
     /**
@@ -47,7 +48,7 @@ final class Money implements ValueObject
      */
     public function toString()
     {
-        return $this;
+        return $this->amount . "" . $this->currency;
     }
         
 

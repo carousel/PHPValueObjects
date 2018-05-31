@@ -16,7 +16,7 @@ final class Currency
         if (!is_string($code)) {
             throw new \Exception('Currecny code must be string');
         }
-        $this->code = $code;
+        $this->code = strtoupper($code);
     }
 
     /**
@@ -61,15 +61,15 @@ final class Currency
         return $this->code;
     }
 
-    /** 
+    /**
      * More user friendly interface for creating currency
      *
      * @param $method
      * @param $args
      * @return Currency
      */
-    public static function __callStatic($method,$args = null): Currency
+    public static function __callStatic($method, $args = null): Currency
     {
-        return Currency::fromString($method,$args);
+        return Currency::fromString($method, $args);
     }
 }
